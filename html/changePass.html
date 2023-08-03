@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="display: flex; flex-direction: column; padding: 5%; margin: 5%; max-width: 200%; align-items: center;" action="/changePassword" method="post">
+        Email:
+        <input style="margin: 1%;" type="email" name="email" required> 
+        
+        Old Password:
+        <input style="margin: 1%;" type="password" name="oldPass" required>
+
+        New Password:
+        <input style="margin: 1%;" type="password" name="newPass" required>
+       
+        Confirm New Password:
+        <input style="margin: 1%;" type="password" name="cNewPass" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

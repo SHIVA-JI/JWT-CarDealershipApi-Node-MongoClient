@@ -1,0 +1,216 @@
+Car Dealership API Documentation
+This API provides endpoints to manage car dealerships, cars, and deals. It uses the Express framework and Faker.js library to generate sample data.
+
+Base URL: http://localhost:3000
+Endpoints:
+1. View All Cars
+Endpoint: GET /api/cars
+Description: Retrieves a list of all available cars.
+Request: None
+Response Format:
+json
+Copy code
+[
+  {
+    "id": "string",
+    "name": "string",
+    "dealership": "string",
+    "owner": "string | null"
+  },
+  ...
+]
+2. View All Cars in a Dealership
+Endpoint: GET /api/cars/dealerships/:dealership
+Description: Retrieves a list of cars available in a specific dealership.
+Request: None
+Response Format:
+json
+Copy code
+[
+  {
+    "id": "string",
+    "name": "string",
+    "dealership": "string",
+    "owner": "string | null"
+  },
+  ...
+]
+3. View All Deals from a Certain Dealership
+Endpoint: GET /api/dealerships/:dealership/deals
+Description: Retrieves a list of deals provided by a certain dealership.
+Request: None
+Response Format:
+json
+Copy code
+[
+  {
+    "id": "string",
+    "carId": "string",
+    "dealership": "string",
+    "price": "number"
+  },
+  ...
+]
+4. Buy a Car After a Deal Is Made
+Endpoint: POST /api/buy/:dealId
+Description: Allows the user to buy a car after a deal is made.
+Request Format:
+json
+Copy code
+{
+  "dealId": "string"
+}
+Response Format:
+json
+Copy code
+{
+  "message": "string",
+  "car": {
+    "id": "string",
+    "name": "string",
+    "dealership": "string",
+    "owner": "string"
+  }
+}
+5. View All Cars Available from a Dealership (User)
+Endpoint: GET /cars
+Description: Retrieves a list of all cars available from the dealership (for users).
+Request: None
+Response Format:
+json
+Copy code
+[
+  {
+    "make": "string",
+    "model": "string",
+    "price": "number"
+  },
+  ...
+]
+6. View All Cars Sold by the Dealership
+Endpoint: GET /sold-cars
+Description: Retrieves a list of all cars sold by the dealership.
+Request: None
+Response Format:
+json
+Copy code
+[
+  {
+    "car": {
+      "make": "string",
+      "model": "string",
+      "price": "number"
+    },
+    "discount": "number",
+    "customerName": "string"
+  },
+  ...
+]
+7. Add Cars to Dealership
+Endpoint: POST /cars
+Description: Adds new cars to the dealership inventory.
+Request Format:
+json
+Copy code
+{
+  "make": "string",
+  "model": "string",
+  "price": "number"
+}
+Response Format:
+json
+Copy code
+[
+  {
+    "make": "string",
+    "model": "string",
+    "price": "number"
+  },
+  ...
+]
+8. View Deals Provided by the Dealership
+Endpoint: GET /deals
+Description: Retrieves a list of deals provided by the dealership.
+Request: None
+Response Format:
+json
+Copy code
+[
+  {
+    "car": {
+      "make": "string",
+      "model": "string",
+      "price": "number"
+    },
+    "discount": "number",
+    "customerName": "string"
+  },
+  ...
+]
+9. Add Deals to Dealership
+Endpoint: POST /deals
+Description: Adds new deals to the dealership inventory.
+Request Format:
+json
+Copy code
+{
+  "car": {
+    "make": "string",
+    "model": "string",
+    "price": "number"
+  },
+  "discount": "number",
+  "customerName": "string"
+}
+Response Format:
+json
+Copy code
+[
+  {
+    "car": {
+      "make": "string",
+      "model": "string",
+      "price": "number"
+    },
+    "discount": "number",
+    "customerName": "string"
+  },
+  ...
+]
+10. View All Vehicles Dealership Has Sold
+Endpoint: GET /sold-vehicles
+Description: Retrieves a list of all vehicles that the dealership has sold.
+Request: None
+Response Format:
+json
+Copy code
+[
+  {
+    "make": "string",
+    "model": "string",
+    "price": "number"
+  },
+  ...
+]
+11. Add New Vehicle to the List of Sold Vehicles After a Deal Is Made
+Endpoint: POST /sold-vehicles
+Description: Adds a new vehicle to the list of sold vehicles after a deal is made.
+Request Format:
+json
+Copy code
+{
+  "make": "string",
+  "model": "string",
+  "price": "number"
+}
+Response Format:
+json
+Copy code
+[
+  {
+    "make": "string",
+    "model": "string",
+    "price": "number"
+  },
+  ...
+]

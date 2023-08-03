@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="display: flex; flex-direction: column; padding: 5%; margin: 5%; max-width: 200%; align-items: center;" action="/signup/submitted" method="post">
+        Name:
+        <input style="margin: 1%;" type="text" name="name" required>
+        Dealer/User
+        <input style="margin: 1%;" type="text" name="profile" placeholder="only type 'Dealer' or 'User'">
+        Email:
+        <input style="margin: 1%;" type="email" name="email" required>
+        Password:
+        <input style="margin: 1%;" type="password" name="password" required>
+        Confirm Password:
+        <input style="margin: 1%;" type="password" name="confirmPassword" required>
+        <br>
+        <button style="margin: 1%;" type="submit">Submit</button>
+        <a style=" padding: 1%;" href="/">Already have an accout? Signin</a>
+    </form>
+    
+    
+</body>
+</html>
