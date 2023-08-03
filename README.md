@@ -1,6 +1,6 @@
-# JWT-CarDealershipApi-Node-MongoClientJWT-CarDealershipApi-Node-MongoClient
-For CarDealershipApi read CarDealershipApiDocument
-ABOUT JWT
+# JWT-CarDealershipApi-Node-MongoClient
+# For CarDealershipApi read CarDealershipApiDocument
+# ABOUT JWT
 Car Dealership API with JWT Authentication The Car Dealership API allows you to manage car dealerships, cars, and deals. It provides various endpoints for both users and dealers to view cars, deals, and perform buying/selling actions. The API uses the Express framework for handling HTTP requests and responses and utilizes the Faker.js library to generate sample data.
 
 Installation Clone the repository: bash Copy code git clone https://github.com/your-username/car-dealership-api.git cd car-dealership-api Install dependencies: bash Copy code npm install Set Environment Variables: Create a .env file in the root directory and add the following:
