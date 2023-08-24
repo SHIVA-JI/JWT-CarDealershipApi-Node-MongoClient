@@ -10,11 +10,11 @@ import { fileURLToPath } from "url";
 
 import { faker } from '@faker-js/faker';
 
-import {createDocument,connectToDatabase,findDocument,updateDocument,findDocById} from "./connection.js";
+import {createDocument,connectToDatabase,findDocument,updateDocument,findDocById} from "./connection.js"; // automaticalys this file is missing
 // For User
-import {dealerAllCars,dealerAllSoldCars,dealerAddCars,dealerProvidedCars,dealerAddDeals,dealerAllSoldVehicles,dealerAddNewToSold} from './restEndpoint.js';
+import {dealerAllCars,dealerAllSoldCars,dealerAddCars,dealerProvidedCars,dealerAddDeals,dealerAllSoldVehicles,dealerAddNewToSold} from './carDealApi.js';
 // For Dealer
-import {viewAllCars,carsInDealership,dealsCertainDealership,buyCar} from './restEndpoint.js';
+import {viewAllCars,carsInDealership,dealsCertainDealership,buyCar} from './carDealApi.js';
 
 import dotenv from 'dotenv';
 dotenv.config();
